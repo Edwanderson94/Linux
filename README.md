@@ -11,7 +11,7 @@ Boas descobertas! 😉
 | :---               | :----    | :---      | :---    | 
 | Comando ou sintaxe    | Contexto    | Descrição | Exemplo ou Conceito |
 | service {subcomando} <nome do serviço> | Gerenciamento de Serviço | Utiliza-se o comando systemctl para esse tipo de serviço | Conceito |
-| service {subcomando} <nome do serviço> | Gerenciamento de Serviço | Apresenta uma lista do status de todos os serviços | service --status-all |
+| service --status-all | Gerenciamento de Serviço | Apresenta uma lista de todos os status que estão ativos ou inativos em seu Linux | inserir imagem |
 | systemctl {subcomando} <nome do serviço> | Gerenciamento de Serviço | Fornece uma maneira simples e eficaz de iniciar, interromper, reiniciar e monitorar os serviços no sistema. | Conceito | 
 | systemctl status <nome do serviço> | Gerenciamento de Serviço | Verificação de status do serviço httpd (apache) | systemctl status httpd.service | 
 | systemctl start <nome do serviço> | Gerenciamento de Serviço | Ativação do serviço httpd (apache) | systemctl start httpd.service | 
@@ -31,36 +31,9 @@ Boas descobertas! 😉
 | pwd  | Contexto    | Descrição | Exemplo ou Conceito |
 | curl  | Contexto    | Descrição | Exemplo ou Conceito |
 | unzip | Contexto    | Descrição | Exemplo ou Conceito |
-
---- 
-
-# Linux - Gerenciador de Software
-
-- Os métodos de gerenciamento de software dependem de repositórios de pacotes de software.
-> Exemplo: A AWS Fornece repositórios on-line amzn2-core para principais pacotes de softwares e o amzn2extra-docker que contem pacotes extras especificamente paca componentes relacionados ao Docker.
-- Nesse contexto os repositórios são servidores que contêm pacotes de software.
-- Quando se usa um gerenciador de pacotes é possivel definir a localização desses repositórios que contem os pacotes de softwares que o gerenciador acessa.
-- As informações do repositório são normalmente definidas em um arquivo de configuração do gerenciador de pacotes.
-> **Exemplo:** O gerenciador de pacotes YUM, as informações de repositório são armazenadas no arquivo **/etc/yum.confi**   
-
-
-**Método Red Hat:** 
- - Gerenciado de Pacote = O Red Hat Package Manager
- - Conhecido como sigla = RPM
- - Extenção do arquivo = .rpm
- - Utilitário de interface front-end comumente utilizada = YUM (Yellow Dog Updater, Modified)
- - Distribuições que utilizam esse método = Amazon Linux 2, Red Hat Linux, Fedora e CentOS
-
-**Método Débian:**
- - Gerenciado de Pacote = Debian Package
- - Conhecido como sigla = dpkg
- - Extenção do arquivo = .deb
- - Utilitário de interface front-end comumente utilizada = APT (Advanced Package Tool)
- - Distribuições que utilizam esse método = Debian e Ubuntu
-
-**Método de Instalação/Atualização de pacotes no formato de Código-Fonte:** 
- - Gerenciado de Pacote = GNU Compiler Collection
- - Conhecido como sigla = GCC
- - Funcionamento = Utiliza-se um compilador como por exemplo o GCC de código aberto, um GCC fornece compiladores para várias linguagens de progamação, depois de compilado é possivel efetuar a instalação.
-
-
+| tee   | Contexto    | Descrição | Exemplo ou Conceito |
+| sort   | Contexto    | Descrição | Exemplo ou Conceito |
+| find   | Contexto    | Descrição | Exemplo ou Conceito |
+| cut   | Contexto    | Descrição | Exemplo ou Conceito |
+| cat   | Contexto    | Descrição | Exemplo ou Conceito |
+| sed   | Contexto    | Descrição | Exemplo ou Conceito |
