@@ -37,6 +37,7 @@ Boas descobertas! 😉
 # Linux - Gerenciador de Software
 
 - Os métodos de gerenciamento de software dependem de repositórios de pacotes de software.
+> Exemplo: A AWS Fornece repositórios on-line amzn2-core para principais pacotes de softwares e o amzn2extra-docker que contem pacotes extras especificamente paca componentes relacionados ao Docker.
 - Nesse contexto os repositórios são servidores que contêm pacotes de software.
 - Quando se usa um gerenciador de pacotes é possivel definir a localização desses repositórios que contem os pacotes de softwares que o gerenciador acessa.
 - As informações do repositório são normalmente definidas em um arquivo de configuração do gerenciador de pacotes.
