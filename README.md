@@ -2,19 +2,19 @@
 
 Como entusiasta e utilizador do Linux, montei uma lista de comandos com o intuito de facilitar pesquisas e consolidar conhecimentos já utilizados. Com ela, economizo tempo e consigo manter o foco nas tarefas que estou fazendo sem precisar investir muito tempo para pesquisar conteúdos que já utilizei, podendo entender com minhas próprias palavras como o comando funciona de forma simples e prática, procurando absorver, fixar e me desenvolver em linux, pois sempre há algo novo para aprender em um mundo de código aberto em constante evolução.
 
-Bem-vindo ao mundo dos comandos Linux! 👨‍💻  
-Boas descobertas! 😉  
+Bem-vindo ao mundo dos comandos Linux! 👨‍💻
+Boas descobertas! 😉
 
 ---
 
-| Comando ou Sintaxe | Contexto | Descrição | Exemplo |
-| :---               | :----    | :---      | :---    | 
+| Comando ou Sintaxe | Contexto | Descrição | Exemplo/Uso de Caso |
+| :---               | :----    | :---      | :---    |
 | Comando ou sintaxe    | Contexto    | Descrição | Exemplo ou Conceito |
 | service {subcomando} <nome do serviço> | Gerenciamento de Serviço | Utiliza-se o comando systemctl para esse tipo de serviço | Conceito |
-| service --status-all | Gerenciamento de Serviço | Apresenta uma lista de todos os status que estão ativos ou inativos em seu Linux | inserir imagem |
-| systemctl {subcomando} <nome do serviço> | Gerenciamento de Serviço | Fornece uma maneira simples e eficaz de iniciar, interromper, reiniciar e monitorar os serviços no sistema. | Conceito | 
-| systemctl status <nome do serviço> | Gerenciamento de Serviço | Verificação de status do serviço httpd (apache) | systemctl status httpd.service | 
-| systemctl start <nome do serviço> | Gerenciamento de Serviço | Ativação do serviço httpd (apache) | systemctl start httpd.service | 
+| service --status-all | Gerenciamento de Serviço | Apresenta uma lista de todos os status que estão ativos ou inativos em seu Linux | ![response-service-1](img\service-response-1.png) |
+| systemctl {subcomando} <nome do serviço> | Gerenciamento de Serviço | Fornece uma maneira simples e eficaz de iniciar, interromper, reiniciar e monitorar os serviços no sistema. | Conceito |
+| systemctl status <nome do serviço> | Gerenciamento de Serviço | Verificação de status do serviço httpd (apache) | systemctl status httpd.service |
+| systemctl start <nome do serviço> | Gerenciamento de Serviço | Ativação do serviço httpd (apache) | systemctl start httpd.service |
 | systemctl stop <nome do serviço> | Gerenciamento de Serviço | Interrompe o serviço httpd (apache) | systemctl stop httpd.service |
 | systemctl status | Gerenciamento de Serviço | Apresenta a lista de todos os serviços em forma de cadeia, assim é possivel verificar os serviços e sub-serviços | Conceito |
 | yum -y check-update   | Contexto    | Descrição | Exemplo ou Conceito |
@@ -37,3 +37,11 @@ Boas descobertas! 😉
 | cut   | Contexto    | Descrição | Exemplo ou Conceito |
 | cat   | Contexto    | Descrição | Exemplo ou Conceito |
 | sed   | Contexto    | Descrição | Exemplo ou Conceito |
+| Alias {apelido-para-comando}='comando-que-receberá-apelido' | Shell Linux | Com este comando é possivel definir um apelido para um comando longo para um comando menor | alias lsf='ls -F' |
+| Touch    | Contexto    | Descrição | Exemplo ou Conceito |
+| chmod    | Contexto    | Descrição | Exemplo ou Conceito |
+| vi    | Contexto    | Descrição | Exemplo ou Conceito |
+| ls -a    | Contexto    | Descrição | Exemplo ou Conceito |
+| ls   | Contexto    | Descrição | Exemplo ou Conceito |
+| cp   | Contexto    | Descrição | Exemplo ou Conceito |
+| echo   | Scripts Shell Linux | Imprime informações na console | echo 'apresentação desse texto na console' |
