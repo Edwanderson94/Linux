@@ -17,6 +17,10 @@ Boas descobertas! 😉
 | systemctl start <nome do serviço> | Gerenciamento de Serviço | Ativação do serviço httpd (apache) | systemctl start httpd.service |
 | systemctl stop <nome do serviço> | Gerenciamento de Serviço | Interrompe o serviço httpd (apache) | systemctl stop httpd.service |
 | systemctl status | Gerenciamento de Serviço | Apresenta a lista de todos os serviços em forma de cadeia, assim é possivel verificar os serviços e sub-serviços | Conceito |
+
+
+| Comando ou Sintaxe | Contexto | Descrição | Exemplo/Uso de Caso |
+| :---               | :----    | :---      | :---    |
 | yum -y check-update   | Contexto    | Descrição | Exemplo ou Conceito |
 | yum update --security    | Contexto    | Descrição | Exemplo ou Conceito |
 | yum -y upgrade    | Contexto    | Descrição | Exemplo ou Conceito |
