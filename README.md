@@ -49,3 +49,17 @@ Boas descobertas! 😉
 | ls   | Contexto    | Descrição | Exemplo ou Conceito |
 | cp   | Contexto    | Descrição | Exemplo ou Conceito |
 | echo   | Scripts Shell Linux | Imprime informações na console | echo 'apresentação desse texto na console' |
+
+
+
+### Linux Daily
+
+| Sintaxe  | Contexto | Descrição |
+| :---    | :----    | :---    |
+| su - <nome-do-usuario>   | gerencia    | troca de usuario | 
+| su - <nome-do-usuario>   | gerencia    | troca de usuario | 
+
+
+
+
+
