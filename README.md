@@ -62,4 +62,11 @@ Boas descobertas! 😉
 
 
 
+gerenciamento de usuarios
+groups <nome-do-usuario> = verificar quais grupos estao configurados para este usuario.
+
+gerenciamento de sistema operacional
+sudo reboot = reinicializaçao do sistema operacional 
+
+
 
