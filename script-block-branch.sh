@@ -1,19 +1,20 @@
 script para bloqueio de uma branch especifica pra dev <> azure devops.
 
-
-
 #!/bin/bash
 
-echo "🚀 Verificando se a branch atual é refs/heads/dev/beta..."
+echo "🚀 Verificando se a branch atual é permitida..."
+
+# Definição da branch permitida
+ALLOWED_BRANCH="refs/heads/dev/beta"
 
 # Obtendo o nome da branch atual no Azure DevOps
 CURRENT_BRANCH=${BUILD_SOURCEBRANCH}
 
 echo "📌 Branch atual: $CURRENT_BRANCH"
 
-# Verifica se a branch é exatamente refs/heads/dev/beta
-if [[ "$CURRENT_BRANCH" != "refs/heads/dev/beta" ]]; then
-    echo "❌ Deploy bloqueado! Apenas a branch 'refs/heads/dev/beta' pode executar este pipeline."
+# Verifica se a branch é exatamente a permitida
+if [[ "$CURRENT_BRANCH" != "$ALLOWED_BRANCH" ]]; then
+    echo "❌ Deploy bloqueado! Apenas a branch '$ALLOWED_BRANCH' pode executar este pipeline."
     exit 1
 fi
 
