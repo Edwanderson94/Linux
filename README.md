@@ -14,7 +14,7 @@ Bem-vindo ao repositório que reúne materiais de estudo e consulta rápida sobr
 
 ---
 
-### 🛠️ **2. Comandos Linux Essenciais**
+### 🛠️ **2. Comandos/Conceitos Linux Essenciais**
 | Arquivo | Conteúdo |
 |--------|----------|
 | [`3.Comandos.md`](./3.Comandos.md) | Comandos fundamentais do Linux para navegação e manipulação de arquivos. |
