@@ -26,8 +26,9 @@ Bem-vindo ao repositório que reúne materiais de estudo e consulta rápida sobr
 ---
 
 ### 🔐 **3. Conceitos Avançados**
-| Arquivo | Conteúdo |
+| Arquivo/Diretório | Conteúdo |
 |--------|----------|
+| [`scripts`](./scripts) | Diretório para armazenar scripts já construídos para ferramentas ou desenvolvimentos pessoais. |
 | [`LICENSE`](./LICENSE) | Licença do repositório. |
 | [`README.md`](./README.md) | Introdução ao repositório, objetivos e como colaborar. |
 
