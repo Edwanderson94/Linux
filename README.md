@@ -21,7 +21,7 @@ Bem-vindo ao repositório que reúne materiais de estudo e consulta rápida sobr
 | [`4.Redirecionamentos.md`](./4.Redirecionamentos.md) | Como usar redirecionamentos no Linux para entradas e saídas. |
 | [`5.Gerenciamento-de-Pacotes.md`](./5.Gerenciamento-de-Pacotes.md) | Como instalar, atualizar e remover pacotes no Linux. |
 | [`6.Gerenciamento-de-Processos.md`](./6.Gerenciamento-de-Processos.md) | Gerenciando processos e verificando recursos no Linux. |
-| [`7.ssh.md`](./7.ssh.md) | Configuração e uso de SSH para acesso remoto. |
+| [`7.SSH.md`](./7.ssh.md) | Configuração e uso de SSH para acesso remoto. |
 
 ---
 
@@ -35,12 +35,12 @@ Bem-vindo ao repositório que reúne materiais de estudo e consulta rápida sobr
 
 ## 👤 Autor
 
-**Edwanderson94**  
+**Edwanderson94**
 📍 GitHub: [github.com/Edwanderson94](https://github.com/Edwanderson94)
 
 ---
 
 ## ✅ Contribuições
 
-Quer contribuir? Fique à vontade para abrir um issue ou enviar um pull request!  
+Quer contribuir? Fique à vontade para abrir um issue ou enviar um pull request!
 Vamos juntos tornar o aprendizado do Linux mais acessível e prático para todos. 🚀
