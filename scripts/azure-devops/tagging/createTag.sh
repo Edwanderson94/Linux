@@ -1,23 +1,27 @@
 #!/bin/bash
 
+set -ex
+
 # 1. Configuração do Git
-git config --global user.email "e-mail@dominio.com.br"
-git config --global user.name "Usuario de Serviço - Azure DevOps"
+git config --global user.email "service@domminio.com.br"
+git config --global user.name "Azure DevOps"
 
 # 2. Definição de Variaveis.
 ORG=$organizationName
 PAT=$autenticatePatSvc
-
 # 2.1 Remove espaços extras e codifica para URL (ex: "Master DevOps" → "Master%20DevOps")
 PROJECT=$projectName               # Nome do projeto
 PROJECT=$(echo "$PROJECT" | xargs) # Remove espaços no início/fim
 PROJECT=${PROJECT// /%20}          # Substitui espaços internos por %20
-REPO=$repositoryName        # Nome do repositório
+REPO=$repositoryName               # Nome do repositório
 REPO_URL="https://$PAT@dev.azure.com/$ORG/$PROJECT/_git/$REPO"
 
 # 3. Pega última tag ou inicia em 0.0.0
 git fetch --tags
-LATEST_TAG=$(git describe --tags --match "[0-9]*.[0-9]*.[0-9]*" --abbrev=0 2>/dev/null || echo "0.0.0")
+LATEST_TAG=$(git tag -l '[0-9]*.[0-9]*.[0-9]*' | sort -V | tail -n1)
+if [[ -z "$LATEST_TAG" ]]; then
+  LATEST_TAG="0.0.0"
+fi
 IFS='.' read -r MAJOR MINOR PATCH <<< "$LATEST_TAG"
 
 # 4. Cria nova tag
