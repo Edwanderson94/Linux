@@ -4,7 +4,7 @@
 set -ex
 
 # 1.0 Configuração do Git
-git config --global user.email "service@dominio.com.br"
+git config --global user.email "service-azuredevops@mastercctvm.com.br"
 git config --global user.name "Azure DevOps"
 
 # 1.1 Definição de Variaveis.
