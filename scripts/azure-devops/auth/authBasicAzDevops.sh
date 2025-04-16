@@ -9,14 +9,12 @@ git config --global user.name "Azure DevOps"
 # --- 2.0 Definição de Variaveis.  ---
 ORG=""
 ORG_URL="https://dev.azure.com/$ORG"
-BRANCHTARGET=""  # Branch alvo do PR
-BRANCHOURCE="" # Branch de origem do PR
 PAT=""
 
 # --- 3.0 Autenticação ---
 echo "$PAT" | az devops login --organization "$ORG_URL"
 
-# --- 4.0 Remove espaços extras e codifica para URL (ex: "Master DevOps" → "Master%20DevOps") ---
+# --- 4.0 Remove espaços extras e codifica para URL (ex: "Projeto DevOps" → "Projeto%20DevOps") ---
 PROJECT=""                                   # Nome do projeto (pode ser utilizado com espaço)
 PROJECT=$(echo "$PROJECT" | xargs)           # Remove espaços no início/fim
 REPO=""                                      # Nome do repositório

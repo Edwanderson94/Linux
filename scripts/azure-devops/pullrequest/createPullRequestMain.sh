@@ -4,7 +4,7 @@
 set -ex
 
 # 1.0 Configuração do Git
-git config --global user.email "service-azuredevops@mastercctvm.com.br"
+git config --global user.email "service-azuredevops@dominio.com.br"
 git config --global user.name "Azure DevOps"
 
 # 1.1 Definição de Variaveis.
@@ -17,7 +17,7 @@ PAT=$autenticatePatSvc
 # 2.0 Login no Azure DevOps
 echo "$PAT" | az devops login --organization "$ORG_URL"
 
-# 2.1 Remove espaços extras e codifica para URL (ex: "Master DevOps" → "Master%20DevOps")
+# 2.1 Remove espaços extras e codifica para URL (ex: "Projeto DevOps" → "Projeto%20DevOps")
 PROJECT=$projectName                         # Nome do projeto
 PROJECT=$(echo "$PROJECT" | xargs)           # Remove espaços no início/fim
 

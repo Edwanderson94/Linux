@@ -9,7 +9,7 @@ git config --global user.name "Azure DevOps"
 # 2. Definição de Variaveis.
 ORG=$organizationName
 PAT=$autenticatePatSvc
-# 2.1 Remove espaços extras e codifica para URL (ex: "Master DevOps" → "Master%20DevOps")
+# 2.1 Remove espaços extras e codifica para URL (ex: "Projeto DevOps" → "Projeto%20DevOps")
 PROJECT=$projectName               # Nome do projeto
 PROJECT=$(echo "$PROJECT" | xargs) # Remove espaços no início/fim
 PROJECT=${PROJECT// /%20}          # Substitui espaços internos por %20
