@@ -9,25 +9,28 @@ Bem-vindo ao repositório que reúne materiais de estudo e consulta rápida sobr
 ### 🔰 **1. Introdução ao Linux**
 | Arquivo | Conteúdo |
 |--------|----------|
-| [`1.Introdução.md`](./1.Introdução.md) | Conteúdo básico sobre o Linux, suas distribuições e o terminal. |
-| [`2.Diretórios.md`](./2.Diretórios.md) | Como funciona a estrutura de diretórios no Linux. |
+| [`01.0-Introdução.md`](./01.0-Introdução.md) | Conteúdo básico sobre o Linux, suas distribuições e o terminal. |
+| [`02.0-Diretórios.md`](./02.0-Diretórios.md) | Como funciona a estrutura de diretórios no Linux. |
 
 ---
 
 ### 🛠️ **2. Comandos/Conceitos Linux Essenciais**
 | Arquivo | Conteúdo |
 |--------|----------|
-| [`3.Comandos.md`](./3.Comandos.md) | Comandos fundamentais do Linux para navegação e manipulação de arquivos. |
-| [`4.Redirecionamentos.md`](./4.Redirecionamentos.md) | Como usar redirecionamentos no Linux para entradas e saídas. |
-| [`5.Gerenciamento-de-Pacotes.md`](./5.Gerenciamento-de-Pacotes.md) | Como instalar, atualizar e remover pacotes no Linux. |
-| [`6.Gerenciamento-de-Processos.md`](./6.Gerenciamento-de-Processos.md) | Gerenciando processos e verificando recursos no Linux. |
-| [`7.SSH.md`](./7.ssh.md) | Configuração e uso de SSH para acesso remoto. |
+| [`03.0-Comandos.md`](./03.0-Comandos.md) | Comandos fundamentais do Linux para navegação e manipulação de arquivos. |
+| [`04.0-Redirecionamentos.md`](./04.0-Redirecionamentos.md) | Como usar redirecionamentos no Linux para entradas e saídas. |
+| [`05.0-GerenciamentoPacotes.md`](./05.0-GerenciamentoPacotes.md) | Como instalar, atualizar e remover pacotes no Linux. |
+| [`06.0-GerenciamentoProcessos.md`](./06.0-GerenciamentoProcessos.md) | Gerenciando processos e verificando recursos no Linux. |
+| [`07.0-SSH.md`](./07.0-SSH.md) | Configuração e uso de SSH para acesso remoto. |
 
 ---
 
 ### 🔐 **3. Conceitos Avançados**
-| Arquivo/Diretório | Conteúdo |
+| Arquivo | Conteúdo |
 |--------|----------|
+| [`08.0-Cgroup.md`](./08.0-Cgroup.md) | Introdução aos Cgroups no Linux para controle de recursos. |
+| [`09.0-LxC.md`](./09.0-LxC.md) | Conceitos e uso de Linux Containers (LXC). |
+| [`10.0-LXD.md`](./10.0-LXD.md) | Introdução ao LXD como uma alternativa moderna ao LXC. |
 | [`scripts`](./scripts) | Diretório para armazenar scripts já construídos para ferramentas ou desenvolvimentos pessoais. |
 | [`LICENSE`](./LICENSE) | Licença do repositório. |
 | [`README.md`](./README.md) | Introdução ao repositório, objetivos e como colaborar. |
