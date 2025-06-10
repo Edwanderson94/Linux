@@ -1,19 +1,18 @@
 #!/bin/bash
 
-# Script para gerar chave SSH
-# Autor: Edwanderson Luiz Pereira
+# Script genérico para geração de chave SSH
 # Versão: 1.0
 
 # Configurações padrão
-ALGORITMO="ed25519"  # Algoritmo recomendado (alternativas: rsa, ecdsa)
-BITS=4096            # Tamanho da chave (para RSA)
+ALGORITMO="ed25519"  # Algoritmo padrão (alternativas: rsa, ecdsa)
+BITS=4096            # Tamanho padrão da chave para RSA
 ARQUIVO_PADRAO="$HOME/.ssh/id_$ALGORITMO"
 COMENTARIO="$USER@$(hostname)-$(date +%Y-%m-%d)"
 
-# Cores para output
+# Cores para saída
 VERDE='\033[0;32m'
 AMARELO='\033[1;33m'
-NC='\033[0m' # No Color
+NC='\033[0m' # Sem cor
 
 echo -e "${AMARELO}=== Gerador de Chave SSH ===${NC}"
 
@@ -42,51 +41,51 @@ case $opcao_algoritmo in
         ;;
 esac
 
-# Nome do arquivo
+# Caminho do arquivo de saída
 read -p "Digite o caminho para salvar a chave [$ARQUIVO_PADRAO]: " arquivo
 ARQUIVO=${arquivo:-$ARQUIVO_PADRAO}
 
-# Comentário
+# Comentário da chave
 read -p "Digite um comentário para a chave [$COMENTARIO]: " comentario_input
 COMENTARIO=${comentario_input:-$COMENTARIO}
 
-# Confirmação
+# Confirmação antes de gerar
 echo -e "\nResumo:"
 echo -e "Algoritmo: ${VERDE}$ALGORITMO${NC}"
-[ "$ALGORITMO" = "rsa" ] || [ "$ALGORITMO" = "ecdsa" ] && echo -e "Bits: ${VERDE}$BITS${NC}"
+[[ "$ALGORITMO" == "rsa" || "$ALGORITMO" == "ecdsa" ]] && echo -e "Bits: ${VERDE}$BITS${NC}"
 echo -e "Arquivo: ${VERDE}$ARQUIVO${NC}"
 echo -e "Comentário: ${VERDE}$COMENTARIO${NC}"
-echo -e "\nA chave será protegida por uma senha (recomendado)"
+echo -e "\nA chave será protegida por uma senha (recomendado)."
 
-read -p "Continuar? [s/N]: " confirmacao
+read -p "Deseja continuar? [s/N]: " confirmacao
 if [[ ! "$confirmacao" =~ ^[sS]$ ]]; then
     echo "Operação cancelada."
     exit 1
 fi
 
-# Gera a chave
+# Geração da chave
 echo -e "\nGerando chave..."
-if [ "$ALGORITMO" = "rsa" ]; then
-    ssh-keygen -t rsa -b $BITS -C "$COMENTARIO" -f "$ARQUIVO"
-elif [ "$ALGORITMO" = "ecdsa" ]; then
-    ssh-keygen -t ecdsa -b $BITS -C "$COMENTARIO" -f "$ARQUIVO"
+if [[ "$ALGORITMO" == "rsa" ]]; then
+    ssh-keygen -t rsa -b "$BITS" -C "$COMENTARIO" -f "$ARQUIVO"
+elif [[ "$ALGORITMO" == "ecdsa" ]]; then
+    ssh-keygen -t ecdsa -b "$BITS" -C "$COMENTARIO" -f "$ARQUIVO"
 else
     ssh-keygen -t ed25519 -C "$COMENTARIO" -f "$ARQUIVO"
 fi
 
-# Configura as permissões corretas
+# Ajusta permissões
 echo -e "\nAjustando permissões..."
 chmod 700 ~/.ssh
 chmod 600 "$ARQUIVO" 2>/dev/null
 chmod 644 "$ARQUIVO.pub" 2>/dev/null
 
-# Mostra a chave pública
+# Exibe chave pública
 echo -e "\n${VERDE}Chave gerada com sucesso!${NC}"
 echo -e "\nChave pública (adicione ao seu servidor):"
 cat "$ARQUIVO.pub"
 
-# Dicas
-echo -e "\n${AMARELO}Dicas:${NC}"
+# Instruções úteis
+echo -e "\n${AMARELO}Dicas úteis:${NC}"
 echo "1) Para usar a chave com o ssh-agent:"
 echo "   eval \$(ssh-agent) && ssh-add $ARQUIVO"
 echo "2) Para copiar a chave para um servidor:"
